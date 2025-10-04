@@ -13,7 +13,7 @@
 #include <sstream>
 #include <string>
 #include <chrono>
-#include <dirent.h> // <-- NEW: For reading directory contents
+#include <dirent.h>
 
 #include "SimpleThreadPool.h"
 
@@ -52,7 +52,7 @@ string getContentType(const string& path) {
     if (endsWith(path, ".png")) return "image/png";
     if (endsWith(path, ".gif")) return "image/gif";
     if (endsWith(path, ".mp4")) return "video/mp4";
-    return "application/octet-stream"; // Default for other files
+    return "application/octet-stream"; 
 }
 
 // NEW: Function to list files in the media directory as a JSON array
