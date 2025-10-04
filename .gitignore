@@ -1,0 +1,9 @@
+# Compiled executable
+server
+a.out
+
+# Object files
+*.o
+
+# VS Code settings
+.vscode/

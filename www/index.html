@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thread Pool Server Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Thread Pool Server Dashboard</h1>
+        
+        <div class="cards">
+            <div class="card" id="threads-card">
+                <h2>Active Threads</h2>
+                <div class="value" id="activeThreads">0</div>
+                <div class="progress-bar">
+                    <div class="progress" id="threadsProgress"></div>
+                </div>
+                <div class="info" id="threadsInfo"></div>
+            </div>
+
+            <div class="card" id="requests-card">
+                <h2>Active Requests</h2>
+                <div class="value" id="activeRequests">0</div>
+                <div class="info" id="requestsInfo"></div>
+            </div>
+
+            <div class="card" id="users-card">
+                <h2>Connected Users</h2>
+                <div class="value" id="connectedUsers">0</div>
+                <div class="info" id="usersInfo"></div>
+            </div>
+
+            <div class="card" id="closed-card">
+                <h2>Closed Connections</h2>
+                <div class="value" id="closedConnections">0</div>
+                <div class="info" id="closedInfo"></div>
+            </div>
+        </div>
+
+        <div class="thread-pool-container">
+            <h2>Thread Pool Status (32 Threads)</h2>
+            <div id="thread-pool-visualization">
+                </div>
+        </div>
+
+        <div class="file-requester-container">
+    <h2>Request a File from the Server</h2>
+    <div class="file-requester-controls">
+        <select id="file-select">
+            <option>Loading files...</option>
+        </select>
+        <button id="request-btn">Fetch File</button>
+    </div>
+    <div id="media-display">
+        </div>
+    </div>
+
+    <div class="footer">
+    </div>
+
+        <div class="footer">
+            Last updated: <span id="lastUpdated">--:--:--</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
